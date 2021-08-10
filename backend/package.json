@@ -19,6 +19,6 @@
   "scripts": {
     "start": "nodemon index.js"
   },
-  "author": "AlejoVela",
+  "author": "@AlejoVela",
   "license": "ISC"
 }

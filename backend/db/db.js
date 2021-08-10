@@ -8,7 +8,7 @@ const dbConnection = async () => {
             useUnifiedTopology: true,
             useCreateIndex: true
         });
-        console.log("Connectio with mongo is OK");
+        console.log("Connection with mongo is OK");
     } catch (error) {
         console.log("Failed to connect with mongo, error: " + error);
     }
