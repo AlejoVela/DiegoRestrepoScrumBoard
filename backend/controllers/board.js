@@ -5,7 +5,7 @@ const saveBoard = async (req, res) => {
         return res.status(401).send("Process Failed: There'r empty fields");
     
     const board = new Board({
-        userId: req.body.userId,
+        userId: req.user._id,
         name: req.body.name,
         description: req.body.description,
         taskStatus: "to-do",

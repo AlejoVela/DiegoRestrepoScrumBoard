@@ -6,7 +6,7 @@ const auth = async (req, res, next) => {
 
     jwToken = jwToken.split(" ")[1];
     if(!jwToken || jwToken.length === 0)
-        return res.status(401).send("Autentification Failed: No token");
+        return res.status(401).send("Autentification Failed: Invalid Token");
 
     try {
         const payload = jwt.verify(jwToken, process.env.PRIVATE_KEYWORD_JWT);
@@ -17,4 +17,4 @@ const auth = async (req, res, next) => {
     }
 };
 
-module.exports = { auth };
+module.exports = auth;
